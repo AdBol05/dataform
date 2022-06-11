@@ -14,6 +14,9 @@ NodeJS version: 16.14.2
 Linux:
 
     sudo apt install nodejs
+--
+
+    source ~/.profile
 Install nvm (if necessary):
 
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
