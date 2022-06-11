@@ -9,6 +9,10 @@ In terminal:
     wget raw.githubusercontent.com/AdBol05/dataform/main/index.js 
 
 
+# Install NodeJS (if necessary)
+
+    sudo apt install nodejs
+
 # Run the code
 Run index.js in terminal with csv file location as argument.
 
