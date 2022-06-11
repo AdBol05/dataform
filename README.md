@@ -16,9 +16,7 @@ Linux:
     sudo apt install nodejs
 Install nvm (if necessary):
 
-    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-
-    source ~/.profile    
+    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
 
 Windows: https://nodejs.org/en/download/
 
