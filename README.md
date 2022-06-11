@@ -9,10 +9,11 @@ Script for converting raw data exported from astropi projects to excel radable C
 
 
 # Install NodeJS (if necessary)
+Linux:
 
     sudo apt install nodejs
     
-    sudo apt install npm
+Windows: https://nodejs.org/en/download/
 
 # Run the code
 Run index.js in terminal with csv file location as argument.
