@@ -11,14 +11,14 @@ Script for converting raw data exported from astropi projects to excel readable 
 # Install NodeJS (if necessary)
 NodeJS version: 16.14.2
 
-Linux:
+Linux (in terminal):
 
     sudo apt install nodejs
 
 Install nvm (if necessary):
 
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
-then run
+then type
 
     source ~/.profile
 
