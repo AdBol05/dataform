@@ -5,15 +5,15 @@ Astropi data formatting script
 Script for converting raw data exported from astropi project to excel radable CSV file.
 
 # Download the code
-    § wget raw.githubusercontent.com/AdBol05/dataform/main/index.js 
+    wget raw.githubusercontent.com/AdBol05/dataform/main/index.js 
 
 
 # Run the code
 Run index.js with csv file location as argument.
 
-    § node index.js (csv file path)
+    node index.js (csv file path)
 
 
 example:
 
-    § node index.js /home/pi/Documents/data.csv
+    node index.js /home/pi/Documents/data.csv
