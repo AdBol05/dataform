@@ -18,7 +18,7 @@ Linux (in terminal):
 Install nvm (if necessary):
 
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
-then type
+execute
 
     source ~/.profile
 
