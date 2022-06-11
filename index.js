@@ -37,5 +37,5 @@ file = file.replaceAll(" m,", ",");
 
 fs.writeFileSync("dataExport.csv", file);
 
-console.log("data written to: %s\\dataExport.csv", path.dirname(__filename));
+console.log("data written to: %s/dataExport.csv", path.dirname(__filename));
 process.exit(0);
