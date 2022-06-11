@@ -15,11 +15,11 @@ Linux (in terminal):
 
     sudo apt install nodejs
 
-_____________________________________________________________________________________________
-Install nvm (if necessary):
+# Install nvm (if necessary):
 
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
-execute
+_____________________________________________________________________________________________
+
 
     source ~/.profile
 
