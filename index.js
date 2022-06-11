@@ -1,7 +1,13 @@
 const fs = require("fs");
-let file = fs.readFileSync("/media/adam/SHARED/NodeJS/dataform/data.csv").toString("utf-8");
+const path = require("path");
 
-console.log("reading data...");
+const args = process.argv.slice(2);
+const directory = args[0];
+
+console.log('reading file on path: %s', directory);
+let file = fs.readFileSync(directory).toString("utf-8");
+
+console.log("processing...");
 
 file = file.replace("Compass(raw)", "Compass X, Compass Y, Compass Z");
 file = file.replace("Accelerometer", "Acc Roll, Acc Pitch, AccYyaw");
@@ -27,9 +33,9 @@ file = file.replaceAll(" longitude ", ",");
 file = file.replaceAll(" elevation ", ",");
 file = file.replaceAll(" m,", ",");
 
-console.log("processing...");
-console.log(file);
+//console.log(file);
 
 fs.writeFileSync("dataExport.csv", file);
 
-console.log("data written to dataExport.csv")
+console.log("data written to: %s\\dataExport.csv", path.dirname(__filename));
+process.exit(0);
