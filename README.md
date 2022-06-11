@@ -15,6 +15,8 @@ Linux (in terminal):
 
     sudo apt install nodejs
 
+Windows: https://nodejs.org/en/download/
+
 # Install nvm (if necessary):
 
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
@@ -25,7 +27,6 @@ ________________________________________________________________________________
 
 
 _____________________________________________________________________________________________
-Windows: https://nodejs.org/en/download/
 
 # Run the code
 Run index.js in terminal with csv file location as argument.
