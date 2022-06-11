@@ -4,7 +4,6 @@
 Script for converting raw data exported from astropi projects to excel radable CSV file.
 
 # Download the code
-In terminal:
 
     wget raw.githubusercontent.com/AdBol05/dataform/main/index.js 
 
