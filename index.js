@@ -45,3 +45,10 @@ fs.writeFileSync("dataExport.csv", file);
 
 console.log("data written to: %s/dataExport.csv", path.dirname(__filename));
 process.exit(0);
+
+/*
+After the file has been cleaned, the output is written to dataExport.csv file.
+This file is created in the script's directory
+WARNING:If the file dataExport.csv already exists, it will be overwritten!
+        Always rename or move this file before cleaning another.
+*/
