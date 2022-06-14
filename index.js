@@ -39,8 +39,6 @@ file = file.replaceAll(" longitude ", ",");
 file = file.replaceAll(" elevation ", ",");
 file = file.replaceAll(" m,", ",");
 
-//console.log(file);
-
 fs.writeFileSync("dataExport.csv", file);
 
 console.log("data written to: %s/dataExport.csv", path.dirname(__filename));
