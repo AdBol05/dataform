@@ -2,7 +2,7 @@
 
 //Astropi data.csv conversion
 //Due to lack of time in development, some Astropi projects have a messy output in data.csv.
-//This script is used to clean the file from addition characters, leaving clean data that can be further proccesed.
+//This script is used to clean the file from addition characters, leaving clean data that can be further processed.
 
 const fs = require("fs");
 const path = require("path");
