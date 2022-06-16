@@ -15,7 +15,7 @@ let file = fs.readFileSync(directory).toString("utf-8");
 
 console.log("processing...");
 
-file = file.replace("date,", " Date/time");
+file = file.replace("date,", " Date/time,");
 file = file.replace("Compass(raw)", "Compass X, Compass Y, Compass Z");
 file = file.replace("Accelerometer", "Acc Roll, Acc Pitch, Acc Yaw");
 file = file.replace("Accelerometer(raw)", "AccRaw X, AccRaw Y, AccRaw Z");
