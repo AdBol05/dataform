@@ -21,7 +21,7 @@ file = file.replace("Accelerometer", "Acc Roll, Acc Pitch, AccYyaw");
 file = file.replace("Accelerometer(raw)", "AccRaw X, AccRaw Y, AccRaw Z");
 file = file.replace("Gyro", "Gyro Roll, Gyro Pitch, Gyro Yaw");
 file = file.replace("Gyro(raw)", "GyroRaw X, GyroRaw Y, GyroRaw Z");
-file = file.replace("Orintation", "Orientation Roll, Oricaentation Pitch, Orientation Yaw");
+file = file.replace("Orintation", "Orientation Roll, Orientation Pitch, Orientation Yaw");
 
 file = file.replace("coordinates", " Latitude, Longitude, Elevation");
 file = file.replace("magnetometer", " Magnetometer X, Magnetometer Y, Magnetometer Z");
