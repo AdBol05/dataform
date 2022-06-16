@@ -10,6 +10,12 @@ const path = require("path");
 const args = process.argv.slice(2);
 const directory = args[0];
 
+console.log("    ____        __        ____                   ");
+console.log("   / __ \\____ _/ /_____ _/ __/___  _________ ___ ");
+console.log("  / / / / __ `/ __/ __ `/ /_/ __ \\/ ___/ __ `__ \\");
+console.log(" / /_/ / /_/ / /_/ /_/ / __/ /_/ / /  / / / / / /");
+console.log("/_____/\\__,_/\\__/\\__,_/_/  \\____/_/  /_/ /_/ /_/ ");
+
 console.log('reading file on path: %s', directory);
 let file = fs.readFileSync(directory).toString("utf-8");
 
