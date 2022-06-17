@@ -10,12 +10,18 @@ const path = require("path");
 const args = process.argv.slice(2);
 const directory = args[0];
 
-console.log("    ____        __        ____                   ");
-console.log("   / __ \\____ _/ /_____ _/ __/___  _________ ___ ");
-console.log("  / / / / __ `/ __/ __ `/ /_/ __ \\/ ___/ __ `__ \\");
-console.log(" / /_/ / /_/ / /_/ /_/ / __/ /_/ / /  / / / / / /");
-console.log("/_____/\\__,_/\\__/\\__,_/_/  \\____/_/  /_/ /_/ /_/ ");
+console.log('\x1b[32m%s\x1b[0m',"    ____        __        ____                   ");
+console.log('\x1b[32m%s\x1b[0m',"   / __ \\____ _/ /_____ _/ __/___  _________ ___ ");
+console.log('\x1b[32m%s\x1b[0m',"  / / / / __ `/ __/ __ `/ /_/ __ \\/ ___/ __ `__ \\");
+console.log('\x1b[32m%s\x1b[0m'," / /_/ / /_/ / /_/ /_/ / __/ /_/ / /  / / / / / /");
+console.log('\x1b[32m%s\x1b[0m',"/_____/\\__,_/\\__/\\__,_/_/  \\____/_/  /_/ /_/ /_/ ");
 console.log("\n");
+
+if(directory == undefined){
+        console.error('\x1b[31m%s\x1b[0m',"ERROR: CSV file path not provided!");
+        console.error('\x1b[31m%s\x1b[0m',"Please input CSV file path as an argument.");
+        process.exit(9); //invalid argument exit code
+}
 
 console.log('reading file on path: %s', directory);
 let file = fs.readFileSync(directory).toString("utf-8");
