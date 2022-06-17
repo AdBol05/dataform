@@ -26,7 +26,6 @@ if(directory == undefined){
 if (fs.existsSync(directory)){
         console.log('reading file on path: %s', directory);
         let file = fs.readFileSync(directory).toString("utf-8");
-
         console.log("processing...");
 
         file = file.replace("date,", " Date/time,");
@@ -36,7 +35,6 @@ if (fs.existsSync(directory)){
         file = file.replace("Gyro", "Gyro Roll, Gyro Pitch, Gyro Yaw");
         file = file.replace("Gyro(raw)", "GyroRaw X, GyroRaw Y, GyroRaw Z");
         file = file.replace("Orintation", "Orientation Roll, Orientation Pitch, Orientation Yaw");
-
         file = file.replace("coordinates", " Latitude, Longitude, Elevation");
         file = file.replace("magnetometer", " Magnetometer X, Magnetometer Y, Magnetometer Z");
 
@@ -48,14 +46,12 @@ if (fs.existsSync(directory)){
         file = file.replaceAll("'roll': ", "");
         file = file.replaceAll(" 'pitch': ", "");
         file = file.replaceAll(" 'yaw': ", "");
-
         file = file.replaceAll("IERS2010 latitude ", "");
         file = file.replaceAll(" longitude ", ",");
         file = file.replaceAll(" elevation ", ",");
         file = file.replaceAll(" m,", ",");
 
         fs.writeFileSync("dataExport.csv", file);
-
         console.log("data written to: %s/dataExport.csv", path.dirname(__filename));
         process.exit(0);
 }
