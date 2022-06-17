@@ -60,7 +60,10 @@ if (fs.existsSync(directory)){
         process.exit(0);
 }
 
-else{console.error('\x1b[31m%s\x1b[0m',"ERROR: No such file or directory");}
+else{
+console.error('\x1b[31m%s\x1b[0m',"ERROR: No such file or directory");
+process.exit(9); //invalid argument exit code
+}
 
 /*
 After the file has been cleaned, the output is written to dataExport.csv file.
