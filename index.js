@@ -18,45 +18,49 @@ console.log('\x1b[32m%s\x1b[0m',"/_____/\\__,_/\\__/\\__,_/_/  \\____/_/  /_/ /_
 console.log("\n");
 
 if(directory == undefined){
-        console.error('\x1b[31m%s\x1b[0m',"ERROR: CSV file path not provided!");
+        console.error('\x1b[31m%s\x1b[0m',"ERROR: CSV file path not provided");
         console.error('\x1b[31m%s\x1b[0m',"Please input CSV file path as an argument.");
         process.exit(9); //invalid argument exit code
 }
 
-console.log('reading file on path: %s', directory);
-let file = fs.readFileSync(directory).toString("utf-8");
+if (fs.existsSync(directory)){
+        console.log('reading file on path: %s', directory);
+        let file = fs.readFileSync(directory).toString("utf-8");
 
-console.log("processing...");
+        console.log("processing...");
 
-file = file.replace("date,", " Date/time,");
-file = file.replace("Compass(raw)", "Compass X, Compass Y, Compass Z");
-file = file.replace("Accelerometer", "Acc Roll, Acc Pitch, Acc Yaw");
-file = file.replace("Accelerometer(raw)", "AccRaw X, AccRaw Y, AccRaw Z");
-file = file.replace("Gyro", "Gyro Roll, Gyro Pitch, Gyro Yaw");
-file = file.replace("Gyro(raw)", "GyroRaw X, GyroRaw Y, GyroRaw Z");
-file = file.replace("Orintation", "Orientation Roll, Orientation Pitch, Orientation Yaw");
+        file = file.replace("date,", " Date/time,");
+        file = file.replace("Compass(raw)", "Compass X, Compass Y, Compass Z");
+        file = file.replace("Accelerometer", "Acc Roll, Acc Pitch, Acc Yaw");
+        file = file.replace("Accelerometer(raw)", "AccRaw X, AccRaw Y, AccRaw Z");
+        file = file.replace("Gyro", "Gyro Roll, Gyro Pitch, Gyro Yaw");
+        file = file.replace("Gyro(raw)", "GyroRaw X, GyroRaw Y, GyroRaw Z");
+        file = file.replace("Orintation", "Orientation Roll, Orientation Pitch, Orientation Yaw");
 
-file = file.replace("coordinates", " Latitude, Longitude, Elevation");
-file = file.replace("magnetometer", " Magnetometer X, Magnetometer Y, Magnetometer Z");
+        file = file.replace("coordinates", " Latitude, Longitude, Elevation");
+        file = file.replace("magnetometer", " Magnetometer X, Magnetometer Y, Magnetometer Z");
 
-file = file.replaceAll("\"\{'x': ", "");
-file = file.replaceAll(" 'y': ", "");
-file = file.replaceAll(" 'z': ", "");
-file = file.replaceAll("\"\{", "");
-file = file.replaceAll("\}\"", "");
-file = file.replaceAll("'roll': ", "");
-file = file.replaceAll(" 'pitch': ", "");
-file = file.replaceAll(" 'yaw': ", "");
+        file = file.replaceAll("\"\{'x': ", "");
+        file = file.replaceAll(" 'y': ", "");
+        file = file.replaceAll(" 'z': ", "");
+        file = file.replaceAll("\"\{", "");
+        file = file.replaceAll("\}\"", "");
+        file = file.replaceAll("'roll': ", "");
+        file = file.replaceAll(" 'pitch': ", "");
+        file = file.replaceAll(" 'yaw': ", "");
 
-file = file.replaceAll("IERS2010 latitude ", "");
-file = file.replaceAll(" longitude ", ",");
-file = file.replaceAll(" elevation ", ",");
-file = file.replaceAll(" m,", ",");
+        file = file.replaceAll("IERS2010 latitude ", "");
+        file = file.replaceAll(" longitude ", ",");
+        file = file.replaceAll(" elevation ", ",");
+        file = file.replaceAll(" m,", ",");
 
-fs.writeFileSync("dataExport.csv", file);
+        fs.writeFileSync("dataExport.csv", file);
 
-console.log("data written to: %s/dataExport.csv", path.dirname(__filename));
-process.exit(0);
+        console.log("data written to: %s/dataExport.csv", path.dirname(__filename));
+        process.exit(0);
+}
+
+else{console.error('\x1b[31m%s\x1b[0m',"ERROR: No such file or directory");}
 
 /*
 After the file has been cleaned, the output is written to dataExport.csv file.
