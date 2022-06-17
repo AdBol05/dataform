@@ -33,6 +33,10 @@ if(fs.lstatSync(directory).isDirectory()){
         console.error('\x1b[31m%s\x1b[0m',"ERROR: Entered path is a directory, must be a file");
         process.exit(9);}
 
+if(!directory.endsWith('.csv')){
+        console.error('\x1b[31m%s\x1b[0m',"ERROR: Not a CSV file");
+        process.exit(9);}
+
 //file processing
 console.log('reading file on path: %s', directory);
 let file = fs.readFileSync(directory).toString("utf-8");
