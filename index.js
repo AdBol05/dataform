@@ -30,8 +30,7 @@ if (!fs.existsSync(directory)){
         process.exit(9);}
 
 if(fs.lstatSync(directory).isDirectory()){
-        console.error('\x1b[31m%s\x1b[0m',"ERROR: Entered path is a directory");
-        console.error('\x1b[31m%s\x1b[0m',"Entered path must be a file");
+        console.error('\x1b[31m%s\x1b[0m',"ERROR: Entered path is a directory, must be a file");
         process.exit(9);}
 
 //file processing
