@@ -76,4 +76,3 @@ This file is created in the script's directory.
 WARNING:If the file dataExport.csv already exists, it will be overwritten!
         Always rename or move this file before cleaning another.
 */
-            
