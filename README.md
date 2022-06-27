@@ -7,7 +7,7 @@ This script is used to clean the file from addition characters, leaving clean da
 After the file has been cleaned, the output is written to dataExport.csv file.
 This file is created in the script's directory.
 
-##WARNING: If the file dataExport.csv already exists, it will be overwritten!
+WARNING: If the file dataExport.csv already exists, it will be overwritten!
         Always rename or move this file before cleaning another.
 
 # Download the code
