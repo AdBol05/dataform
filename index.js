@@ -66,7 +66,7 @@ file = file.replaceAll(" elevation ", ",");
 file = file.replaceAll(" m,", ",");
 
 //data output
-fs.writeFileSync("dataExport.csv", file);
+fs.writeFileSync(path.dirname(__filename)+"/dataExport.csv", file);
 console.log("data written to: %s/dataExport.csv", path.dirname(__filename));
 process.exit(0);
 
