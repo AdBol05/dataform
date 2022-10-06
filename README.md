@@ -1,6 +1,4 @@
 # Dataform
-![image](https://user-images.githubusercontent.com/98588523/152417709-2008e586-28c6-4f2a-9e84-af8307ac01b9.png)
-
 Due to lack of time in development, some Astropi projects have a messy output in data.csv.
 This script is used to clean the file from addition characters, leaving clean data that can be further processed.
 
