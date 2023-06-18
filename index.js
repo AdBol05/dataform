@@ -17,7 +17,6 @@ console.log('\x1b[32m%s\x1b[0m',"   / __ \\____ _/ /_____ _/ __/___  _________ _
 console.log('\x1b[32m%s\x1b[0m',"  / / / / __ `/ __/ __ `/ /_/ __ \\/ ___/ __ `__ \\   ");
 console.log('\x1b[32m%s\x1b[0m'," / /_/ / /_/ / /_/ /_/ / __/ /_/ / /  / / / / / /     ");
 console.log('\x1b[32m%s\x1b[0m',"/_____/\\__,_/\\__/\\__,_/_/  \\____/_/  /_/ /_/ /_/  ");
-console.log('\x1b[32m%s\x1b[0m',"Developed at Laborky.cz \n");
 
 //error handling
 if(directory == undefined){
